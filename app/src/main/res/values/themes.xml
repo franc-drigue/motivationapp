@@ -1,0 +1,9 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.Motivation" parent="Theme.Material3.DayNight.NoActionBar">
+        <item name="colorPrimary">@color/magenta</item> <!-- Cor do fundo do botão -->
+        <item name="colorSurface">@color/magenta</item> <!-- Cor de fundo dos componentes de superfície -->
+    </style>
+
+    <style name="Theme.Motivation" parent="Base.Theme.Motivation" />
+</resources>

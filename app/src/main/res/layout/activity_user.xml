@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/magenta"
+    android:orientation="vertical"
+    android:padding="10dp"
+    tools:context=".ui.UserActivity">
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="80dp"
+        android:gravity="center"
+        android:padding="10dp"
+        android:text="@string/vamos_comecar"
+        android:textColor="#fff"
+        android:textSize="27sp" />
+
+
+    <EditText
+        android:id="@+id/edit_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginTop="150dp"
+        android:gravity="center"
+        android:hint="@string/qual_seu_nome"
+        android:textColor="@color/white"
+        android:textColorHint="#fff"
+        android:textSize="23sp" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/button_name"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="center"
+        android:layout_marginBottom="95dp"
+        android:background="@drawable/button"
+        android:elevation="10dp"
+        android:text="@string/save"
+        android:textAllCaps="true"
+        android:textColor="@color/magenta" />
+
+
+</RelativeLayout>
