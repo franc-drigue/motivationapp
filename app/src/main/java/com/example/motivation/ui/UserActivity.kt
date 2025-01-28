@@ -12,8 +12,7 @@ import com.example.motivation.infra.SecurityPreferences
 
 class UserActivity : AppCompatActivity(), View.OnClickListener {
 
-    private lateinit var binding: ActivityUserBinding
-
+    private lateinit var binding: ActivityUserBinding;
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState);
@@ -21,22 +20,23 @@ class UserActivity : AppCompatActivity(), View.OnClickListener {
         binding = ActivityUserBinding.inflate(layoutInflater);
         setContentView(binding.root);
 
-        verifyName()
-
         binding.buttonName.setOnClickListener(this)
     }
 
+    // Ao clicar no botão para salvar o nome a função handleSave() é chamada.
     override fun onClick(view: View) {
         if (view.id == R.id.button_name) {
             handleSave();
         }
     }
 
+    // Função handleSave(), responsável em pegar o valor digitado pelo o usuário
+    // Salvar no SharedPreferences, navegar para a próxima página e destruir a Activity em seguida
+    // Senão, caso o usuário não informe nada no EditText é lançado uma notificação
     private fun handleSave() {
         val name = binding.editName.text.toString().trim();
         if (name != "") {
-            SecurityPreferences(this).storeString(Consts.KEY.KEY_NAME, name)
-
+            SecurityPreferences(this).storeString(Consts.KEY.KEY_NAME, name);
             startActivity(Intent(this, MainActivity:: class.java));
             finish();
         } else {
@@ -44,12 +44,16 @@ class UserActivity : AppCompatActivity(), View.OnClickListener {
         }
     }
 
-    private fun verifyName() {
+    /** Função que verifica se existe algum valor no SharedPreferences,
+    se existir não a necessidade de preencher novamente, então é feito a
+    navegação para a MainActivity e então a UserActivity é destruída
+     **/
+    /**private fun verifyName() {
         val name = SecurityPreferences(applicationContext).getStoreString(Consts.KEY.KEY_NAME);
         if (name != "") {
             startActivity(Intent(this, MainActivity:: class.java));
             finish();
         }
-    }
+    }**/
 
 }

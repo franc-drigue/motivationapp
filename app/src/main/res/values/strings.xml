@@ -5,4 +5,6 @@
     <string name="qual_seu_nome">Qual seu nome?</string>
     <string name="save">Salvar</string>
     <string name="validation_mandatory_name">Nome Inválido</string>
+    <string name="new_frase">Nova Frase</string>
+    <string name="hello">Olá</string>
 </resources>

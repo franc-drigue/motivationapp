@@ -89,7 +89,7 @@
         android:layout_marginBottom="50dp"
         android:background="@drawable/button"
         android:elevation="10dp"
-        android:text="nova frase"
+        android:text="@string/new_frase"
         android:textAllCaps="true" />
 
 </RelativeLayout>
